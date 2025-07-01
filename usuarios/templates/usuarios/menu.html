@@ -1,16 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Task Manager</title>
+    <link rel="stylesheet" href="{% static 'usuarios/inicio.css' %}"
 </head>
 <body>
     <h1>Task Manager</h1>
     <h3>¿Quieres organizarte de una <span>forma sencilla</span>?</h3>
     <form action="{% url 'inicio_sesion' %}">
-        <button>Inicia Sesión</button>
+        <button class="boton" style="background-color: forestgreen;">Inicia Sesión</button>
     </form>
     <form action="{% url 'registro' %}">
-        <button>Regístrate</button>
+        <button class="boton" style="background-color: gold;">Regístrate</button>
     </form>
 </body>
 </html>

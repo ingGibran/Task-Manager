@@ -7,7 +7,7 @@ def menu(request):
 
 def registro(request):
     if request.method == 'POST':
-        form = RegistroUsuarioForm(request)
+        form = RegistroUsuarioForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('inicio_sesion')

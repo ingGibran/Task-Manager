@@ -1,20 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Task Manager - Iniciar Sesión</title>
+    <link rel="stylesheet" href="{% static 'usuarios/formularios.css' %}">
+
 </head>
 <body>
     <h1>Task Manager</h1>
-    <h2>Iniciar Sesión</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Ingresar</button>
-    </form>
-    ¿Aún no tienes una cuenta? <a href="{% url 'registro' %}">Regístrate</a>
-
+    <div class="bloque-formulario">
+        <h2>Iniciar Sesión</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="boton" style="background-color: forestgreen;">Ingresar</button>
+        </form>
+    </div>
+    <p>¿Aún no tienes una cuenta? <a href="{% url 'registro' %}">Regístrate</a></p>
     <form action="{% url 'menu' %}">
-        <button>Regresar</button>
+        <button class="boton" style="background-color: dimgrey;">Regresar</button>
     </form>
 
 </body>

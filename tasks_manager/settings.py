@@ -129,3 +129,5 @@ LOGIN_REDIRECT_URL = '/administrador/'
 LOGOUT_REDIRECT_URL = '/menu/'
 
 LOGIN_URL = '/inicio_sesion/'
+
+STATIC_URL = '/static/'

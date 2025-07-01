@@ -1,0 +1,36 @@
+body {
+    background-color: azure;
+    font-family: Verdana;
+    font-size: 20px;
+    text-align: center;
+}
+
+h1 {
+    color:cornflowerblue;
+    font-family: monospace;
+    font-size: 70px;
+    text-align: center;
+}
+
+h2 {
+    color:goldenrod;
+    font-family:Verdana;
+    font-size: 30px;
+}
+
+.bloque-formulario {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5% 20% 5% 20%;
+    text-align: center;
+}
+
+.boton {
+    font-size: 15px;
+    color:white;
+    width: 30%;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
