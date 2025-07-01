@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Manager - Registro</title>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <h2>Registrarse</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Continuar</button>
+    </form>
+
+    ¿Ya tienes una cuenta? <a href="{% url 'inicio_sesion' %}">Ingresa</a>
+
+    <form action="{% url 'menu' %}">
+        <button>Regresar</button>
+    </form>
+
+</body>
+</html>
