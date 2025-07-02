@@ -17,11 +17,11 @@ def registro(request):
     
 def inicio_sesion(request):
     if request.method == 'POST':
-        form = InicioSesionUsuarioForm(request)
+        form = InicioSesionUsuarioForm(request, data=request.POST)
         if form.is_valid():
             usuario = form.get_user()
             login(request,usuario)
-            return redirect('menu_usuario')
+            return redirect('listar_tareas')
     else:
         form = InicioSesionUsuarioForm()
     return render(request, 'usuarios/inicio_sesion.html', {'form':form})

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Manager - Listar Tareas</title>
+    <link rel="stylesheet" href="{% static 'manager/listar_tareas.css' %}">
+</head>
+<body>
+    <h1>Task Manager</h1>
+
+    <h3>Agrega una nueva tarea</h3>
+    <form action="{% url 'crear_task' %}">
+        <button class="boton" style="background-color: forestgreen;">Crear</button>
+    </form>
+
+    {% for task in tasks %}
+        <div class="task">
+            <strong>{{ task.titulo }}</strong>
+            {{ task.descripcion }}
+            {{ task.estado }}
+        </div>
+    {% empty %}
+        <p>Aún no haz creado ninguna Task <a href="{% url 'crear_task' %}">Crea una</a></p>
+    {% endfor %}
+    
+    <form action="{% url 'salir' %}">
+        <button class="boton" style="background-color: dimgray;">Salir</button>
+    </form>
+</body>
+</html>

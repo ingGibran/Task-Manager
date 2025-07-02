@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Manager - Crear Task</title>
+    <link rel="stylesheet" href="{% static 'manager/formularios.css' %}">
+</head>
+<body>
+    <h1>Task Manager</h1>
+
+    <div class="bloque-formulario">
+        <h2>Crear Task</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+        </form>
+
+        <form>
+            <button class="boton" style="background-color: forestgreen;">Agregar</button>
+        </form>
+
+        <form action="{% url 'listar_tareas' %}">
+            <button class="boton" style="background-color: dimgray;">Regresar</button>
+        </form>
+    </div>
+</body>
+</html>
