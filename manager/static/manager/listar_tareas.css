@@ -19,10 +19,49 @@ h3 {
 .boton {
     color: white;
     font-size: 15px;
-    width: 15%;
+    width: 20%;
     height: 40px;
     margin: 5% 80% 5% 80%;
     border: 1px solid gray;
     border-radius: 10px;
     margin: 10px;
+}
+
+.tarea-baja {
+    background-color: lightgreen;
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 3px solid cornflowerblue;
+    border-radius: 10px;
+}
+.tarea-media {
+    background-color: yellow;
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 3px solid cornflowerblue;
+    border-radius: 10px;
+}
+.tarea-alta {
+    background-color: orange;
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 3px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+.urgencia {
+    border: 1px solid gray;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
 }

@@ -130,5 +130,3 @@ LOGIN_REDIRECT_URL = '/listar_tareas/'
 LOGOUT_REDIRECT_URL = '/menu/'
 
 LOGIN_URL = '/inicio_sesion/'
-
-STATIC_URL = '/static/'

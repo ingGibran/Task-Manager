@@ -13,11 +13,31 @@
         <button class="boton" style="background-color: forestgreen;">Crear</button>
     </form>
 
+    
+    <button class="urgencia" style="background-color: lightgreen;"></button>Urgencia Baja<br>
+    <button class="urgencia" style="background-color: yellow;"></button>Urgencia Media<br>
+    <button class="urgencia" style="background-color: orange;"></button>Urgencia Alta
+    
+    
     {% for task in tasks %}
-        <div class="task">
-            <strong>{{ task.titulo }}</strong>
-            {{ task.descripcion }}
-            {{ task.estado }}
+        <div class="tarea-{{ task.urgencia }}">
+            <strong>{{ task.titulo }}</strong><br>
+            {{ task.descripcion }}<br>
+            
+            {% if task.estado == "pendiente" %}
+                <p>Pendiente</p>
+            {% elif task.estado == "en_progreso" %}
+                <p>En Proceso</p>
+            {% elif task.estado == "completada" %}
+                <p>Completada</p>
+            {% endif %}
+
+            <form action="{% url 'editar_task' task.id %}">
+                <button class="boton" style="background-color: lightblue;">Editar</button>
+            </form>
+            <form action="{% url 'eliminar_task' task.id %}">
+                <button class="boton" style="background-color: crimson;">Eliminar</button>
+            </form>
         </div>
     {% empty %}
         <p>Aún no haz creado ninguna Task <a href="{% url 'crear_task' %}">Crea una</a></p>

@@ -8,7 +8,12 @@ class CrearTaskForm(forms.ModelForm):
         fields = ['titulo', 'descripcion', 'estado', 'urgencia']
         widgets = {
             'titulo': forms.TextInput(attrs={'class':'form-tarea'}),
-            'descripcion': forms.TextInput(attrs={'class':'form-tarea'}),
+            'descripcion': forms.Textarea(attrs={
+                'class': 'form-tarea',
+                'rows': 5,
+                'cols': 40,
+                'class': 'text-area',
+                }),
             'estado': forms.Select(attrs={'class':'form-tarea'}),
             'urgencia': forms.Select(attrs={'class':'form-tarea'}),
         }

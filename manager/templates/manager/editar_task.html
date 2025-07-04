@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Manager - Editar Task</title>
+    <link rel="stylesheet" href="{% static 'manager/formularios.css' %}"
+</head>
+<body>
+    <h1>Task Manager</h1>
+
+    <h3>Editar tarea</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="boton" style="background-color: forestgreen;">Guardar cambios</button>
+    </form>
+</body>
+</html>
